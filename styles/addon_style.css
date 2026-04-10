@@ -1,0 +1,70 @@
+.addons_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.addons_title{
+    text-align: start;
+    margin-left: 30px;
+}
+
+
+.addon{
+    width: 90%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.addon:hover {
+    border-color: #02295a;
+    background-color: #f8f9ff;
+}
+
+.addon.selected {
+    border-color: #02295a;
+    background-color: #f8f9ff;
+}
+
+.addon input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.addon_info {
+    flex-grow: 1;
+}
+
+.addon_info h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #02295a;
+}
+
+.addon_info p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+    color: #9699ab;
+}
+
+.addon_price {
+    color: #483eff;
+    font-weight: 500;
+}
+
+.addon_img{
+    width: 10%;
+}

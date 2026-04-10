@@ -1,0 +1,9 @@
+body{
+    background-color: rgb(29, 29, 31);
+    font-family: 'mainFont';
+    color: white;
+}
+@font-face {
+    font-family: mainFont;
+    src: url("../assets/font/SF-Pro.ttf");
+}

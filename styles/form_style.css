@@ -1,0 +1,59 @@
+.form_group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.form_groups_container{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.form_group label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.form_group input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* .form_group input:focus:invalid,
+.form_group input:not(:placeholder-shown):invalid {
+    border-color: #ed3548;
+} */
+
+.button_group {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: auto;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.btn_back {
+    background: none;
+    border: none;
+    color: #9699ab;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.btn_back:hover {
+    color: #02295a;
+}
+
+.btn_next {
+    background-color: #02295a;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+}

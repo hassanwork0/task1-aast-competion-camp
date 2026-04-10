@@ -1,0 +1,121 @@
+.plane {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.plane_title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0px;
+    width: 10%;
+    min-width: 100px;
+    max-width: 180px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: white;
+    box-sizing: border-box;
+}
+
+.card:hover {
+    border-color: #02295a;
+    transform: scale(1.02); /* Reduced from 1.05 to prevent overflow */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service_img {
+    width: 80px; /* Fixed width instead of percentage */
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.card .price-year {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.card .note {
+    color: #27ae60;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.card .description {
+    color: #666;
+    font-size: 0.85rem;
+    margin: 10px 0;
+}
+
+.select-btn {
+    background-color: #007aff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.select-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px);
+        min-width: 150px;
+    }
+    
+    .service_img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .card h2 {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: calc(100% - 20px);
+    }
+}
