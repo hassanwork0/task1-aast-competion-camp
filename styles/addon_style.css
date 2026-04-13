@@ -2,69 +2,184 @@
     display: flex;
     flex-direction: column;
     justify-content: start;
-    align-items: start;
+    align-items: center;
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
+    gap: 15px;
 }
-.addons_title{
+
+.addons_title {
     text-align: start;
     margin-left: 30px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
+.addons_title h1 {
+    font-size: 1.5rem;
+    color: #02295a;
+    margin-bottom: 10px;
+}
 
-.addon{
-    width: 90%;
-    height: 40%;
+.addons_title p {
+    color: #9699ab;
+}
+
+.addon {
+    width: 95%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border: 1px solid #ccc;
     border-radius: 8px;
-    margin-bottom: 15px;
+    margin-bottom: 0;
     padding: 15px;
     cursor: pointer;
     transition: all 0.3s ease;
+    background-color: white;
+    gap: 15px;
 }
 
 .addon:hover {
     border-color: #02295a;
     background-color: #f8f9ff;
+    transform: translateX(5px);
 }
 
 .addon.selected {
-    border-color: #02295a;
+    border: 2px solid #02295a;
     background-color: #f8f9ff;
+    box-shadow: 0 2px 8px rgba(2, 41, 90, 0.1);
 }
 
-.addon input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin-right: 20px;
-    cursor: pointer;
+.addon_img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    flex-shrink: 0;
 }
 
 .addon_info {
     flex-grow: 1;
+    min-width: 0;
 }
 
 .addon_info h3 {
     margin: 0;
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #02295a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .addon_info p {
     margin: 5px 0 0;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #9699ab;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .addon_price {
     color: #483eff;
     font-weight: 500;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
-.addon_img{
-    width: 10%;
+/* Optional: Add checkbox styling if you want checkboxes */
+.addon input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .addons_container {
+        padding: 10px;
+    }
+    
+    .addons_title {
+        margin-left: 15px;
+    }
+    
+    .addons_title h1 {
+        font-size: 1.2rem;
+    }
+    
+    .addon {
+        width: 100%;
+        padding: 12px;
+        flex-wrap: wrap;
+    }
+    
+    .addon_img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .addon_info h3 {
+        font-size: 0.9rem;
+        white-space: normal;
+    }
+    
+    .addon_info p {
+        font-size: 0.8rem;
+    }
+    
+    .addon_price {
+        font-size: 0.85rem;
+        margin-top: 5px;
+        width: 100%;
+        text-align: right;
+    }
+}
+
+/* Animation for addons */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.addon {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Container scroll if needed */
+.addons_container {
+    max-height: calc(50vh);
+    overflow-y: auto;
+}
+
+/* Custom scrollbar for addons container */
+.addons_container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.addons_container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+.addons_container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.addons_container::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }

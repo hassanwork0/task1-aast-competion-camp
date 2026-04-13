@@ -42,7 +42,24 @@ const page3 = `<div class="addons_title">
 
                 </div>`;
 
-const page4 = '<h1 style="margin-left: 32px;">Summary,</h1>';
+const page4 = `
+                <div class="summary_container">
+                <div class="selected_planes">
+                <h2>ٍSelected Planes : </h2>
+                
+                </div>
+                <div class="selected_addons">
+                    <h2>Selected Addons :</h2>
+                </div>
+                <div class="calculated price"></div>
+                <div class="button_group">
+                <button type="button" class="btn_back" id="back">Go Back</button>
+                <button type="button" class="btn_next" id="next">Finish</button>
+
+                </div>
+            </div>
+        
+`;
 
 let pages = [page1, page2, page3, page4]
 
@@ -63,6 +80,8 @@ function getPageContent(pageNumber) {
         loadServices();
     }else if(pageNumber == 3){
         loadAddons();
+    }else if(pageNumber ==4){
+        loadSummary();
     }
 
     const backBtn = document.getElementById('back');
@@ -73,7 +92,7 @@ function getPageContent(pageNumber) {
         nextBtn.style.display = 'block';
     } else if (currentPage > pages.length - 1) {
         nextBtn.style.display = 'none';
-        backBtn.style.display = 'block';
+        backBtn.style.display = 'none';
 
     } else {
         backBtn.style.display = 'block';
